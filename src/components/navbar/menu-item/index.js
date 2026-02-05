@@ -6,12 +6,12 @@ export default function MenuItem({ item, level = 0 }) {
   const hasChildren = item.children && item.children.length > 0;
 
   return (
-    <div className={`${level === 0 ? "border-b border-white/10 py-3" : "py-2"}`}>
+    <div className={`${level === 0 ? "border-b border-white/10 py-3" : "py-1"}`}>
       {/* Parent */}
       <button
         onClick={() => hasChildren && setOpen(!open)}
         className={`w-full flex justify-between items-center
-          ${level === 0 ? "text-2xl font-light" : "text-lg opacity-80"}
+          ${level === 0 ? "text-2xl" : "text-lg opacity-80"}
         `}
       >
         {item.label}
@@ -34,7 +34,7 @@ export default function MenuItem({ item, level = 0 }) {
             open ? "max-h-[1000px] mt-3" : "max-h-0"
           }`}
         >
-          <div className="flex flex-col gap-2 pl-4 border-l border-white/10">
+          <div className="flex flex-col pl-4 border-l border-white/10">
             {item.children.map((child, i) => (
               <MenuItem key={i} item={child} level={level + 1} />
             ))}

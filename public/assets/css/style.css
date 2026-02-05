@@ -1,3 +1,80 @@
 @import "tailwindcss";
 
 
+@theme {
+  /* === BRAND COLORS === */
+  --color-brand-dark: #1c1c1c;        /* Headline / navbar */
+  --color-brand-gold: #c8a97e;        /* Accent / CTA */
+  --color-brand-cream: #f6f2eb;       /* Section background */
+  --color-brand-sage: #9fae9c;        /* Wellness accent */
+  --color-brand-muted: #6b6b6b;       /* Paragraph */
+
+  /* === TYPOGRAPHY === */
+  /* --font-sans: "Inter", sans-serif;
+  --font-display: "Playfair Display", serif; */
+
+  /* === SPACING SCALE === */
+  --space-section: 8rem;
+  --space-section-mobile: 5rem;
+
+  /* === RADIUS === */
+  --radius-sm: 0.75rem;
+  --radius-md: 1.25rem;
+  --radius-lg: 2rem;
+}
+
+@layer base {
+    /* body {
+      @apply text-[var(--color-brand-muted)] bg-white;
+    } */
+  
+    /* h1, h2, h3, h4 {
+      @apply font-display text-[var(--color-brand-dark)];
+    } */
+  
+    section {
+      padding-block: var(--space-section);
+    }
+  
+    @media (max-width: 768px) {
+      section {
+        padding-block: var(--space-section-mobile);
+      }
+    }
+  
+    .container {
+      @apply max-w-[1440px] mx-auto px-6;
+    }
+}
+
+@layer utilities {
+    /* Headings */
+    .heading-hero {
+      @apply text-5xl md:text-7xl leading-tight tracking-tight;
+    }
+  
+    .heading-section {
+      @apply text-4xl md:text-5xl;
+    }
+  
+    .heading-sub {
+      @apply text-lg tracking-widest uppercase text-[var(--color-brand-gold)];
+    }
+  
+    /* NAVBAR */
+    .text-muted-nav {
+      @apply text-base text-[14px] text-[var(--color-brand-muted)] tracking-wide leading-relaxed;
+    }
+  
+    .text-footer-nav {
+      @apply tracking-wide;
+    }
+
+    .text-paragraph {
+        font-family: var(--font-geist-sans);
+        @apply font-light text-[18px]
+        
+    }
+}
+  
+  

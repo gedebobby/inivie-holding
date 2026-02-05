@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import BurgerButton from "../burger-button";
 import MenuItem from "./menu-item";
+import { FaInstagram, FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa";
+
 
 const menu = [
     {
@@ -15,7 +17,7 @@ const menu = [
       ],
     },
     {
-      label: "Brand Portfolios (Collections)",
+      label: "Brand Portfolios",
       children: [
         {
           label: "Saneca",
@@ -90,7 +92,7 @@ export default function Navbar() {
             : "bg-transparent py-6"
         }`}
         >
-        <div className="relative px-6 mx-auto flex items-center justify-between">
+        <div className="relative px-2 md:px-6 mx-auto flex items-center justify-between">
             
             {/* Left */}
             <BurgerButton open={open} onClick={() => setOpen(!open)} />
@@ -110,7 +112,7 @@ export default function Navbar() {
             {/* Right CTA */}
             <a
             href="#"
-            className="bg-[#ff8432] text-white px-8 py-3 rounded-full text-base tracking-wide font-medium hover:opacity-90 transition"
+            className="bg-[#ff8432] text-white p-2 md:px-8 md:py-3 rounded-full text-base tracking-wide font-medium hover:opacity-90 transition"
             >
             Book Now
             </a>
@@ -127,11 +129,11 @@ export default function Navbar() {
       />
 
       {/* Side Menu */}
-      <aside className={`fixed top-0 left-0 h-full max-w-[560px] w-[460px] bg-[#FFFFFF] text-[#000] z-50
+      <aside className={`fixed top-0 left-0 h-full w-full md:w-[560px] bg-[#FFFFFF] text-[#000] z-50
         transform transition-transform duration-500 ease-[cubic-bezier(0.77,0,0.18,1)]
         ${open ? "translate-x-0" : "-translate-x-full"}`}
         >
-        <div className="p-5 h-full flex flex-col">
+        <div className="px-5 pt-5 md:pb-14 pb-5 h-full flex flex-col">
             
             {/* Close Button */}
             <div className="flex justify-start mb-12">
@@ -154,10 +156,47 @@ export default function Navbar() {
             </nav>
 
 
-            {/* Optional footer */}
-            <div className="mt-auto text-xs opacity-50 tracking-widest">
-                INI VIE HOSPITALITY
+            {/* Footer */}
+            <div className="mt-auto pt-8 border-t border-white/20">
+              <div className="flex flex-col md:justify-between gap-6 text-sm">
+
+                {/* Address */}
+                <div className="space-y-1 opacity-80">
+                  <p className="tracking-widest text-lg opacity-60">
+                    INI VIE HOLDING
+                  </p>
+                </div>
+
+                <div className="space-y-1">
+                  <p className="text-muted-nav">Address</p>
+                  <p className="text-footer-nav">Jl. Example Street No.88, Seminyak, Bali</p>
+                </div>
+
+                {/* Contact */}
+                <div className="space-y-1">                  
+                  <p className="text-muted-nav">Contact</p>
+                  <p className="text-footer-nav">+62 812 3733 9353</p>
+                  <p className="text-footer-nav">info@inivie.com</p>
+                </div>
+
+                {/* Social Media */}
+                <div className="flex items-center gap-4 text-[30px]">
+                  <a href="https://instagram.com/inivie" target="_blank" className="opacity-70 hover:opacity-100 transition">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://facebook.com/inivie" target="_blank" className="opacity-70 hover:opacity-100 transition">
+                    <FaFacebookF />
+                  </a>
+                  <a href="https://tiktok.com/@inivie" target="_blank" className="opacity-70 hover:opacity-100 transition">
+                    <FaTiktok />
+                  </a>
+                  <a href="https://youtube.com/@inivie" target="_blank" className="opacity-70 hover:opacity-100 transition">
+                    <FaYoutube />
+                  </a>
+                </div>
+              </div>
             </div>
+
         </div>
         </aside>
 
