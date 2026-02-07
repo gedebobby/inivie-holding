@@ -77,7 +77,7 @@
     }
 
     .title-card {
-      @apply text-xl font-light tracking-wide font-manrope
+      @apply text-2xl font-light tracking-wide font-manrope
     }
 }
   

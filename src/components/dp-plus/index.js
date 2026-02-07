@@ -32,7 +32,7 @@ export default function DpPlus() {
                 <p className="text-sm tracking-[0.4em] text-neutral-400 mb-6 font-inter">
                     Architect & Consultant
                 </p>
-                <h3 className="text-3xl font-light mb-6 font-manrope">
+                <h3 className="text-2xl font-light mb-6 font-manrope">
                     DP+ CONCEPT
                 </h3>
                 <p className="text-paragraph mb-10">
@@ -52,7 +52,7 @@ export default function DpPlus() {
                 <p className="text-sm tracking-[0.4em] text-neutral-400 mb-6 font-inter">
                     Design & Build
                 </p>
-                <h3 className="text-3xl font-light mb-6 font-manrope">
+                <h3 className="text-2xl font-light mb-6 font-manrope">
                     DP+ CONSTRUCTION
                 </h3>
                 <p className="text-paragraph mb-10">

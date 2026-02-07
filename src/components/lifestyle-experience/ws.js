@@ -156,7 +156,7 @@ export default function WonderspaceSection() {
 const TabButton = ({ label, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`relative pb-3 border-b transition-all duration-500 font-manrope
+    className={`relative pb-3 border-b transition-all duration-500 font-manrope uppercase text-[18px] font-light
       ${active ? "text-black" : "text-black/30 hover:text-black/70 border-transparent"}
     `}
   >

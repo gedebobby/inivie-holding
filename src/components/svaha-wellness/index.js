@@ -64,7 +64,7 @@ export default function SvahaWellness() {
               key={key}
               onClick={() => setActive(key)}
               className={`
-                text-md tracking-[0.2em] uppercase font-light transition text-[23px] font-manrope
+                tracking-[0.2em] uppercase font-light transition text-[23px] font-manrope
                 ${active === key
                   ? "text-neutral-700"
                   : "text-black/30 hover:text-black/60"}
