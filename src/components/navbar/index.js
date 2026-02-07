@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import BurgerButton from "../burger-button";
 import MenuItem from "./menu-item";
 import { FaInstagram, FaFacebookF, FaTiktok, FaYoutube } from "react-icons/fa";
+import BookingPanel from "./booking-panel";
 
 
 const menu = [
@@ -76,6 +77,8 @@ const menu = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [bookingOpen, setBookingOpen] = useState(false);
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -87,37 +90,39 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-            scrolled
-            ? "bg-black/70 backdrop-blur-md py-10"
-            : "bg-transparent py-6"
+          scrolled
+            ? "bg-black/70 backdrop-blur-md h-[80px]"
+            : "bg-transparent h-[120px]"
         }`}
-        >
-        <div className="relative px-2 md:px-6 mx-auto flex items-center justify-between">
-            
-            {/* Left */}
-            <BurgerButton open={open} onClick={() => setOpen(!open)} />
+      >
+        <div className="relative px-2 md:px-6 mx-auto flex items-center justify-between h-full">
 
-            {/* Center Logo (ABSOLUTE REAL CENTER) */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-                <img
-                    src={`/assets/img/logo/logo.webp`}
-                    width={80}
-                    height={80}
-                    alt="logo"
-                    className={`transition-all duration-500 ${scrolled ? "mt-0" : "mt-5"}`}
-                />
-            </div>
+          {/* Left */}
+          <BurgerButton open={open} onClick={() => setOpen(!open)} />
 
+          {/* Center Logo */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <img
+              src={`/assets/img/logo/logo.webp`}
+              alt="logo"
+              className={`
+                transition-all duration-500 ease-[cubic-bezier(0.77,0,0.18,1)]
+                ${scrolled ? "w-[48px]" : "w-[80px]"}
+              `}
+            />
+          </div>
 
-            {/* Right CTA */}
-            <a
-            href="#"
-            className="bg-[#ff8432] text-white p-2 md:px-8 md:py-3 rounded-full text-base tracking-wide font-medium hover:opacity-90 transition"
-            >
+          {/* Right CTA */}
+          <a
+            onClick={() => setBookingOpen(true)}
+            className="cursor-pointer bg-[#ff8432] text-white p-2 md:px-8 md:py-3 rounded-xs tracking-wide font-light hover:opacity-90 transition"
+          >
             Book Now
-            </a>
+          </a>
+
         </div>
-        </header>
+      </header>
+
 
 
       {/* Overlay */}
@@ -198,7 +203,9 @@ export default function Navbar() {
             </div>
 
         </div>
-        </aside>
+      </aside>
+
+      <BookingPanel open={bookingOpen} onClose={() => setBookingOpen(false)} />
 
     </>
   );

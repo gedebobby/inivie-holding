@@ -4,16 +4,14 @@ import useEmblaCarousel from "embla-carousel-react";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi2";
 
 const properties = [
-  { brand: "Saneca", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Seascape Uluwatu", location: "Uluwatu, Bali" },
-  { brand: "Solo", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Sini Vie Resort", location: "Seminyak, Bali" },
-  { brand: "Solo", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Sini Vie Resort", location: "Seminyak, Bali" },
-  { brand: "Solo", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Sini Vie Resort", location: "Seminyak, Bali" },
-  { brand: "Solo", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Sini Vie Resort", location: "Seminyak, Bali" },
-  { brand: "Saneca", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Asvara Resort Ubud", location: "Ubud, Bali" },
-  { brand: "Saneca", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Asvara Resort Ubud", location: "Ubud, Bali" },
-  { brand: "Saneca", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Asvara Resort Ubud", location: "Ubud, Bali" },
-  { brand: "Saneca", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Asvara Resort Ubud", location: "Ubud, Bali" },
-  { brand: "Saneca", image: "https://inivie.com/inivie_assets/img/featured/asvara-resort-new.webp", title: "Asvara Resort Ubud", location: "Ubud, Bali" },
+  { brand: "Saneca", image: "https://backend.inivie.com/storage/inivie_page/gallery/af1b3498b27214ad922dd3429.webp", title: "Seascape Uluwatu", location: "Uluwatu, Bali" },
+  { brand: "Solo", image: "https://stayatsolo.com/storage/properties/about-section/jEyBvAh5mrrAAqQ0bhAV2xMYXKBOh5BQHPye8orM.webp", title: "Vinava Villa", location: "Canggu, Bali" },
+  { brand: "Solo", image: "https://stayatsolo.com/storage/properties/bfMXcv6RFlM3npCkvoPJDNXnQEQWhVEgLIFsFjMV.webp", title: "Cabana Kedungu", location: "Tabanan, Bali" },
+  { brand: "Solo", image: "https://stayatsolo.com/storage/properties/gallery/5ByScPSgeToy6FpvCeetriiIBpNrncYDbg11dNzW.webp", title: "Kanadea Villa", location: "Canggu, Bali" },
+  { brand: "Solo", image: "https://stayatsolo.com/storage/properties/gallery/Grvo1alKH2v6RbJxxUD7xOQt4sZnGcejaxe4oqlC.webp", title: "La Mira Villa", location: "Seminyak, Bali" },
+  { brand: "Saneca", image: "https://backend.inivie.com/storage/inivie_page/gallery/9b2811b54f8b7762b282b5c61.webp", title: "Asvara Resort Ubud", location: "Ubud, Bali" },
+  { brand: "Saneca", image: "https://backend.inivie.com/storage/inivie_page/gallery/7fdaa54e6f70fef75a1153e16.webp", title: "Kaamala Resort Ubud", location: "Ubud, Bali" },
+  { brand: "Saneca", image: "https://backend.inivie.com/storage/inivie_page/gallery/f4e503572f39e7e8be4663586.webp", title: "Aksari Resort Ubud", location: "Ubud, Bali" },
 ];
 
 export default function PropertyShowcase() {
@@ -21,9 +19,11 @@ export default function PropertyShowcase() {
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
-    loop: true,
-    dragFree: true,
+    loop: false,
+    speed: 8,
+    dragFree: false,
   });
+  
 
   const filtered = properties.filter((p) => p.brand === active);
 
@@ -35,36 +35,32 @@ export default function PropertyShowcase() {
     });
   }, [active, emblaApi]);
 
-  // Auto slide stabil (tidak leak)
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    const auto = setInterval(() => {
-      emblaApi.scrollNext();
-    }, 3500);
-
-    return () => clearInterval(auto);
-  }, [emblaApi, active]);
-
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="py-28">
+    <section className="">
       <div className="container">
-        <h2 className="text-[30px] md:text-[35px] uppercase font-semibold text-center">
-        Featured property for you   
+        <h2 className="heading-section text-center">
+          Stays, Curated by Ini Vie
         </h2>
 
+        <div className="mt-6">
+            <p className="text-paragraph text-center max-w-[1200px] mx-auto">
+                {/* {active === "Saneca" ? "Saneca offers design-led tropical escapes crafted for serenity and intimate luxury." : "Solo presents vibrant stays rooted in lifestyle, energy, and contemporary hospitality."} */}
+                Romantic escapes and effortless group stays, crafted with signature design, warm hospitality, and seamless comfort across Bali.
+            </p>
+        </div>
+
         {/* Brand Switcher – Editorial Style */}
-        <div className="flex justify-center mt-14">
-            <div className="flex items-center text-[18px] md:text-[22px] tracking-[0.25em] uppercase font-medium text-center">
+        <div className="flex justify-center my-16">
+            <div className="flex items-center text-[18px] md:text-[20px] tracking-widest font-light text-center">
 
                 {["Saneca", "Solo"].map((brand, index) => (
                 <div key={brand} className="flex items-center">
                     <button
                     onClick={() => setActive(brand)}
-                    className={`px-12 md:px-20 py-4 transition-all duration-300 uppercase
+                    className={`px-12 md:px-20 py-4 transition-all duration-300 font-manrope uppercase text-[23px] tracking-[0.2em] font-light
                         ${
                         active === brand
                             ? "text-black"
@@ -85,15 +81,8 @@ export default function PropertyShowcase() {
             </div>
         </div>
 
-
-        <div className="py-10">
-            <p className="text-paragraph text-center max-w-[1200px] mx-auto">
-                {active === "Saneca" ? "Saneca offers design-led tropical escapes crafted for serenity and intimate luxury." : "Solo presents vibrant stays rooted in lifestyle, energy, and contemporary hospitality."}
-            </p>
-        </div>
-
         {/* Slider */}
-        <div className="relative group">
+        <div className="relative">
           {/* Arrow Left */}
           <button
             onClick={scrollPrev}
@@ -113,7 +102,7 @@ export default function PropertyShowcase() {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex gap-8">
               {filtered.map((item, i) => (
-                <div key={i} className="min-w-[85%] md:min-w-[48%] lg:min-w-[32%]">
+                <div key={i} className="min-w-[85%] md:min-w-[48%] lg:min-w-[32%] group">
                   <PropertyCard {...item} />
                 </div>
               ))}
@@ -121,11 +110,11 @@ export default function PropertyShowcase() {
           </div>
         </div>
 
-        <div className="py-16 text-center">
+        <div className="pt-16 text-center">
             <a href="#" className="
                 inline-flex items-center gap-3
                 px-10 py-4
-                rounded-full
+                rounded-xs
                 border border-[#ff8432]
                 text-[#ff8432]
                 tracking-wider text-sm font-medium
@@ -145,19 +134,23 @@ export default function PropertyShowcase() {
 }
 
 const PropertyCard = ({ image, title, location }) => (
-  <div className="group cursor-pointer">
-    <div className="overflow-hidden rounded-3xl">
+  <div className="cursor-pointer">
+    <div className="overflow-hidden rounded-sm">
       <img
         src={image}
         alt={title}
         className="w-full h-[360px] object-cover transition duration-700 group-hover:scale-105"
       />
     </div>
-    <div className="mt-6">
-      <h3 className="text-xl font-semibold tracking-wide">{title}</h3>
-      <p className="text-neutral-400 mt-2 text-sm tracking-wide">
+
+    <div className="mt-6 transition duration-500 group-hover:translate-y-1">
+      <h3 className="title-card">
+        {title}
+      </h3>
+      <p className="text-neutral-400 mt-2 text-sm tracking-wide font-inter">
         {location}
       </p>
     </div>
   </div>
 );
+

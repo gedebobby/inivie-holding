@@ -1,7 +1,12 @@
+import DpPlus from "@/components/dp-plus";
 import FeaturedProperty from "@/components/featured-property";
 import PropertyShowcase from "@/components/featured-property-2";
 import HeroVideo from "@/components/hero";
+import InsightBali from "@/components/insight-bali";
+import LifestyleExperience from "@/components/lifestyle-experience";
+import WonderspaceSection from "@/components/lifestyle-experience/ws";
 import Navbar from "@/components/navbar";
+import SvahaWellness from "@/components/svaha-wellness";
 
 export default function Home() {
   return (
@@ -9,9 +14,9 @@ export default function Home() {
     <Navbar />
     <HeroVideo />
 
-    <section className="bg-[#f9f9f9]">
+    <section className="bg-[#eeeeee]">
       <div className="container">
-        <h1 className="text-[30px] md:text-[45px] uppercase font-semibold text-center">Ini Vie Hospitality</h1>
+        <h1 className="text-[30px] md:text-[35px] font-manrope font-light text-[#1c2434] text-center">iNi ViE HOSPITALITY</h1>
         <p className="text-paragraph max-w-[1100px] text-center mx-auto pt-5">Ini Vie is a Bali based hospitality group crafting design led stays, lifestyle experiences, and wellness journeys, powered by a growing media and development ecosystem. We curate brands with soul, strong aesthetics, and warm service, creating experiences people remember and return to.</p>
         {/* Cards */}
         <div className="grid md:grid-cols-2 xl:grid-cols-5 pt-18">
@@ -60,11 +65,11 @@ export default function Home() {
           ].map((card, i) => (
             <div key={i} className="px-10 pt-16 border-r border-neutral-200 xl:last:border-none flex flex-col min-h-[420px]">
               <div>
-                <h2 className="text-[28px] text-center font-semibold tracking-wide mb-6">
+                <h2 className="text-[24px] text-center tracking-wide mb-6 font-inter">
                   {card.title}
                 </h2>
 
-                <p className="text-neutral-600 text-center leading-relaxed text-[15px]">
+                <p className="text-paragraph text-center leading-relaxed text-2xl">
                   {card.desc}
                 </p>
               </div>
@@ -95,6 +100,16 @@ export default function Home() {
 
     {/* <FeaturedProperty />   */}
     <PropertyShowcase />  
+
+    {/* <LifestyleExperience /> */}
+
+    <WonderspaceSection />
+
+    <SvahaWellness />
+
+    <InsightBali />
+
+    <DpPlus />
 
   </>
 )};
