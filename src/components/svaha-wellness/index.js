@@ -168,6 +168,7 @@ const hammanaImages = [
   "https://hammanaspa.com/assets/img/gallery-2/6.webp",
   "https://hammanaspa.com/assets/img/gallery-2/14.webp",
   "https://hammanaspa.com/assets/img/gallery-2/3.webp",
+  "https://hammanaspa.com/assets/img/gallery-2/13.webp",
 ];
 
 const HeroSpaCard = ({ name, location }) => (

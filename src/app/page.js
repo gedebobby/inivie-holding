@@ -101,17 +101,21 @@ export default function Home() {
 
     {/* <FeaturedProperty />   */}
     <PropertyShowcase />  
-
+    <div className="border-t border-neutral-300 opacity-50" />
     {/* <LifestyleExperience /> */}
+
 
     <WonderspaceSection />
     <div className="border-t border-neutral-300 opacity-50" />
+
     <SvahaWellness />
     <div className="border-t border-neutral-300 opacity-50" />
 
     <InsightBali />
+    <div className="border-t border-neutral-300 opacity-50" />
 
     <DpPlus />
+    <div className="border-t border-neutral-300 opacity-50" />
 
     <Footer />
 
