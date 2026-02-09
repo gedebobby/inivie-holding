@@ -115,7 +115,7 @@ export default function Home() {
     <div className="border-t border-neutral-300 opacity-50" />
 
     <DpPlus />
-    <div className="border-t border-neutral-300 opacity-50" />
+    <div className="py-5"></div>
 
     <Footer />
 
