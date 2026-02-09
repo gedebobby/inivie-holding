@@ -17,7 +17,7 @@ export default function Home() {
 
     <section className="">
       <div className="container">
-        <h1 className="text-[30px] md:text-[35px] font-manrope font-light text-[#1c2434] text-center">iNi ViE HOSPITALITY</h1>
+        <h1 className="text-[30px] md:text-[35px] font-manrope font-light text-[#1c2434] text-center">iNi ViE</h1>
         <p className="text-paragraph max-w-[1100px] text-center mx-auto pt-5">Ini Vie is a Bali based hospitality group crafting design led stays, lifestyle experiences, and wellness journeys, powered by a growing media and development ecosystem. We curate brands with soul, strong aesthetics, and warm service, creating experiences people remember and return to.</p>
         {/* Cards */}
         <div className="grid md:grid-cols-2 xl:grid-cols-5 pt-18">

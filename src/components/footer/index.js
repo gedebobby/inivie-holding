@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Brand Statement */}
         <div className="max-w-3xl">
           <h3 className="text-3xl font-light tracking-wide font-manrope">
-            iNi Vie Hospitality
+            iNi ViE
           </h3>
           <p className="mt-6 text-white/60 leading-relaxed font-inter">
             A house of brands crafting stays, lifestyle destinations, restorative

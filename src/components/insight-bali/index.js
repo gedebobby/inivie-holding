@@ -26,7 +26,7 @@ export default function InsightBali() {
             <img
               src="\assets\img\media\mediaa.webp"
               alt="Insight Bali Media"
-              className="w-full h-[420px] object-cover mb-10"
+              className="w-full h-[420px] object-cover mb-10 rounded-sm"
             />
 
             <h3 className="text-3xl font-light mb-4 font-manrope">Media</h3>
@@ -63,7 +63,7 @@ export default function InsightBali() {
                 // src="https://thewonderspace.com/outlet-events/cantinacanggu/private.webp"
                 src="\assets\img\media\media.webp"
                 alt="Insight Bali Partnership"
-                className="w-full h-105 object-cover mb-10 transition duration-700 hover:scale-105"
+                className="w-full h-105 object-cover mb-10 transition duration-700 hover:scale-105 rounded-sm"
               />
             </div>
 
