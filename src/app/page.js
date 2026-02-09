@@ -64,7 +64,7 @@ export default function Home() {
               ],
             },
           ].map((card, i) => (
-            <div key={i} className="px-10 pt-16 border-r border-neutral-200 xl:last:border-none flex flex-col min-h-[420px]">
+            <div key={i} className="px-10 pt-16 border-b pb-16 md:pb-0 last:pb-0 md:border-b-0 md:border-r border-neutral-200 xl:last:border-none flex flex-col min-h-[420px]">
               <div>
                 <h2 className="text-[24px] text-center tracking-wide mb-6 font-inter">
                   {card.title}

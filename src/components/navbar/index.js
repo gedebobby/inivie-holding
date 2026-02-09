@@ -78,13 +78,32 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [lastScroll, setLastScroll] = useState(0);
+  const [showCTA, setShowCTA] = useState(true);
+
 
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const handleScroll = () => {
+      const current = window.scrollY;
+  
+      setScrolled(current > 40);
+  
+      if (current > lastScroll && current > 120) {
+        // scroll down
+        setShowCTA(false);
+      } else {
+        // scroll up
+        setShowCTA(true);
+      }
+  
+      setLastScroll(current);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScroll]);
+  
 
   return (
     <>
@@ -95,27 +114,33 @@ export default function Navbar() {
             : "bg-transparent h-[120px]"
         }`}
       >
-        <div className="relative px-2 md:px-6 mx-auto flex items-center justify-between h-full">
+        <div className="relative px-2 md:px-6 mx-auto flex flex-row-reverse md:flex-row items-center justify-between h-full">
 
           {/* Left */}
           <BurgerButton open={open} onClick={() => setOpen(!open)} />
 
-          {/* Center Logo */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <img
-              src={`/assets/img/logo/logo.webp`}
-              alt="logo"
-              className={`
-                transition-all duration-500 ease-[cubic-bezier(0.77,0,0.18,1)]
-                ${scrolled ? "w-[48px]" : "w-[80px]"}
-              `}
-            />
-          </div>
+          {/* Logo */}
+          <div
+            className="
+              absolute top-1/2 -translate-y-1/2
+              left-6 md:left-1/2
+              md:-translate-x-1/2
+            "
+          >
+          <img
+            src="/assets/img/logo/logo.webp"
+            alt="logo"
+            className={`
+              transition-all duration-500 ease-[cubic-bezier(0.77,0,0.18,1)]
+              ${scrolled ? "w-[48px]" : "w-[90px] md:w-[80px]"}
+            `}
+          />
+        </div>
 
-          {/* Right CTA */}
+          {/* Right CTA */}          
           <a
             onClick={() => setBookingOpen(true)}
-            className="cursor-pointer bg-[#ff8432] text-white p-2 md:px-8 md:py-3 rounded-xs tracking-wide font-inter font-light hover:opacity-90 transition"
+            className="cursor-pointer bg-[#ff8432] text-white p-2 hidden md:block md:px-8 md:py-3 rounded-xs tracking-wide font-inter font-light hover:opacity-90 transition"
           >
             Book Now
           </a>
@@ -204,6 +229,29 @@ export default function Navbar() {
 
         </div>
       </aside>
+
+      {/* Mobile Sticky CTA */}
+      {/* <div
+        className={`
+          md:hidden fixed bottom-0 left-0 w-full z-[55]
+          transition-all duration-500 ease-[cubic-bezier(0.77,0,0.18,1)]
+          ${showCTA ? "translate-y-0" : "translate-y-full"}
+        `}
+      > */}
+      <div
+        className={`
+          md:hidden fixed bottom-0 left-0 w-full z-[45]
+          transition-all duration-500 ease-[cubic-bezier(0.77,0,0.18,1)]
+          ${showCTA ? "translate-y-0" : "translate-y-full"}
+        `}
+      >
+        <button
+          onClick={() => setBookingOpen(true)}
+          className="w-full bg-[#ff8432] text-white py-5 tracking-[0.2em] font-light"
+        >
+          BOOK NOW
+        </button>
+      </div>
 
       <BookingPanel open={bookingOpen} onClose={() => setBookingOpen(false)} />
 

@@ -60,7 +60,7 @@ export default function PropertyShowcase() {
                 <div key={brand} className="flex items-center">
                     <button
                     onClick={() => setActive(brand)}
-                    className={`px-12 md:px-20 py-4 transition-all duration-300 font-manrope uppercase text-[23px] tracking-[0.2em] font-light
+                    className={`px-5 md:px-20 py-4 transition-all duration-300 font-manrope uppercase text-[23px] tracking-[0.2em] font-light
                         ${
                         active === brand
                             ? "text-black"

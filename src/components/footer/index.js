@@ -94,7 +94,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 text-sm text-white/50 font-inter">
           <p>© {new Date().getFullYear()} iNi Vie Hospitality. All rights reserved.</p>
 
-          <div className="flex items-center gap-8 tracking-widest uppercase">
+          <div className="flex items-center gap-2 mx-auto md:gap-8 tracking-widest uppercase">
             <a href="#" className="hover:text-white transition">Instagram</a>
             <a href="#" className="hover:text-white transition">Youtube</a>
             <a href="#" className="hover:text-white transition">LinkedIn</a>

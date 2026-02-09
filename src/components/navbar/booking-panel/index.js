@@ -39,7 +39,7 @@ export default function BookingPanel({ open, onClose }) {
       <div
         ref={panelRef}
         onClick={stopPropagation}
-        className={`relative w-[95%] md:w-[1100px] h-[85vh] bg-white rounded-2xl overflow-hidden shadow-2xl
+        className={`relative w-[95%] md:w-[1100px] h-[85vh] bg-white rounded-xs overflow-hidden shadow-2xl
         transition-all duration-700 ease-[cubic-bezier(0.77,0,0.18,1)]
         ${open ? "scale-100" : "scale-95"}`}
       >
