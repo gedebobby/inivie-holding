@@ -24,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${inter.variable}`}>
+      <body className={`bg-[#eeeeee] ${manrope.variable} ${inter.variable}`}>
         {children}
       </body>
     </html>

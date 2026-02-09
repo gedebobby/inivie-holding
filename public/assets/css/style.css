@@ -14,7 +14,7 @@
   --font-inter: var(--font-inter);
 
   /* === SPACING SCALE === */
-  --space-section: 8rem;
+  --space-section: 6rem;
   --space-section-mobile: 5rem;
 
   /* === RADIUS === */
@@ -35,6 +35,7 @@
     section {
       padding-block: var(--space-section);
       /* padding-top: 4rem; */
+      /* @apply border-t border-neutral-300  */
     }
   
     @media (max-width: 768px) {

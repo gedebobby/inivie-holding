@@ -43,7 +43,7 @@ export default function SvahaWellness() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="bg-white py-28">
+    <section className="">
       <div className="container">
 
         {/* Intro */}
@@ -119,8 +119,15 @@ export default function SvahaWellness() {
             <div className="text-center mt-16">
               <a
                 href="#"
-                className="inline-flex items-center px-12 py-4 border border-black/30
-                tracking-[0.1em] text-sm hover:border-black transition"
+                className="
+                  inline-flex items-center
+                  px-12 py-4
+                  border border-black/50
+                  text-black
+                  tracking-[0.25em] text-xs
+                  transition-all duration-500
+                  hover:border-black hover:text-black
+                  font-manrope"
               >
                 Explore Svaha Spa
               </a>
@@ -197,11 +204,11 @@ const HeroSpaCard = ({ name, location }) => (
 
     {/* === TEXT SIDE === */}
     <div className="lg:sticky lg:top-32">
-      <h3 className="title-card text-3xl">{name}</h3>
+      <h3 className="text-3xl font-thin tracking-wider font-manrope">{name}</h3>
       <p className="text-neutral-500 mt-2">{location}</p>
 
       <p className="text-neutral-600 mt-8 leading-relaxed max-w-lg">
-        An ultra-curated hammam ritual space crafted for profound relaxation,
+        An ultra-curated hammana ritual space crafted for profound relaxation,
         privacy, and sensory indulgence. Rooted in ancient bathing traditions
         and reimagined through contemporary luxury.
       </p>
@@ -209,8 +216,15 @@ const HeroSpaCard = ({ name, location }) => (
       <div className="mt-12">
         <a
           href="#"
-          className="inline-flex items-center px-12 py-4 border border-black/30
-          tracking-[0.1em] text-sm hover:border-black transition"
+          className="
+              inline-flex items-center
+              px-12 py-4
+              border border-black/50
+              text-black
+              tracking-[0.25em] text-xs
+              transition-all duration-500
+              hover:border-black hover:text-black
+              font-manrope"
         >
           Explore Hammana Spa
         </a>

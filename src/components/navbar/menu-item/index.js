@@ -10,7 +10,7 @@ export default function MenuItem({ item, level = 0 }) {
       {/* Parent */}
       <button
         onClick={() => hasChildren && setOpen(!open)}
-        className={`w-full flex justify-between items-center
+        className={`w-full flex justify-between items-center font-manrope
           ${level === 0 ? "text-2xl" : "text-lg opacity-80"}
         `}
       >

@@ -138,11 +138,12 @@ export default function WonderspaceSection() {
             className="
               inline-flex items-center
               px-12 py-4
-              border border-black/30
-              text-black/80
-              tracking-[0.3em] text-xs
+              border border-black/50
+              text-black
+              tracking-[0.25em] text-xs
               transition-all duration-500
               hover:border-black hover:text-black
+              font-manrope
             "
           >
             {ctaMap[active].label}

@@ -1,6 +1,7 @@
 import DpPlus from "@/components/dp-plus";
 import FeaturedProperty from "@/components/featured-property";
 import PropertyShowcase from "@/components/featured-property-2";
+import Footer from "@/components/footer";
 import HeroVideo from "@/components/hero";
 import InsightBali from "@/components/insight-bali";
 import LifestyleExperience from "@/components/lifestyle-experience";
@@ -14,7 +15,7 @@ export default function Home() {
     <Navbar />
     <HeroVideo />
 
-    <section className="bg-[#eeeeee]">
+    <section className="">
       <div className="container">
         <h1 className="text-[30px] md:text-[35px] font-manrope font-light text-[#1c2434] text-center">iNi ViE HOSPITALITY</h1>
         <p className="text-paragraph max-w-[1100px] text-center mx-auto pt-5">Ini Vie is a Bali based hospitality group crafting design led stays, lifestyle experiences, and wellness journeys, powered by a growing media and development ecosystem. We curate brands with soul, strong aesthetics, and warm service, creating experiences people remember and return to.</p>
@@ -104,12 +105,15 @@ export default function Home() {
     {/* <LifestyleExperience /> */}
 
     <WonderspaceSection />
-
+    <div className="border-t border-neutral-300 opacity-50" />
     <SvahaWellness />
+    <div className="border-t border-neutral-300 opacity-50" />
 
     <InsightBali />
 
     <DpPlus />
+
+    <Footer />
 
   </>
 )};

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function DpPlus() {
   return (
-    <section className="bg-white">
+    <section className="">
         <div className="container">
 
             {/* Heading Besar */}
@@ -29,7 +29,7 @@ export default function DpPlus() {
 
             {/* Text DP+ Concept */}
             <div className="md:col-span-5 flex flex-col justify-center">
-                <p className="text-sm tracking-[0.4em] text-neutral-400 mb-6 font-inter">
+                <p className="text-sm tracking-[0.3em] text-neutral-400 mb-6 font-inter">
                     Architect & Consultant
                 </p>
                 <h3 className="text-2xl font-light mb-6 font-manrope">
@@ -49,7 +49,7 @@ export default function DpPlus() {
 
             {/* Text DP+ Construction */}
             <div className="md:col-span-5 flex flex-col justify-center order-2 md:order-none">
-                <p className="text-sm tracking-[0.4em] text-neutral-400 mb-6 font-inter">
+                <p className="text-sm tracking-[0.3em] text-neutral-400 mb-6 font-inter">
                     Design & Build
                 </p>
                 <h3 className="text-2xl font-light mb-6 font-manrope">

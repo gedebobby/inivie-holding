@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function InsightBali() {
   return (
-    <section className=" bg-white">
+    <section className="">
       <div className="container">
 
         {/* Heading */}
@@ -24,7 +24,7 @@ export default function InsightBali() {
           {/* MEDIA */}
           <div className="text-center">
             <img
-              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400"
+              src="\assets\img\media\mediaa.webp"
               alt="Insight Bali Media"
               className="w-full h-[420px] object-cover mb-10"
             />
@@ -41,14 +41,14 @@ export default function InsightBali() {
               <a
                 href='#'
                 className="
-                    inline-flex items-center
-                    px-12 py-4
-                    border border-black/30
-                    text-black/80
-                    tracking-[0.1em] text-sm
-                    transition-all duration-500
-                    hover:border-black hover:text-black
-                    font-manrope
+                  inline-flex items-center
+                  px-12 py-4
+                  border border-black/50
+                  text-black
+                  tracking-[0.25em] text-xs
+                  transition-all duration-500
+                  hover:border-black hover:text-black
+                  font-manrope
                 "
                 >
                     Visit Insight Bali   
@@ -58,13 +58,16 @@ export default function InsightBali() {
 
           {/* PARTNERSHIP */}
           <div className="text-center">
-            <img
-              src="https://thewonderspace.com/outlet-events/cantinacanggu/private.webp"
-              alt="Insight Bali Partnership"
-              className="w-full h-[420px] object-cover mb-10 rounded-sm"
-            />
+            <div className="overflow-hidden">
+              <img
+                // src="https://thewonderspace.com/outlet-events/cantinacanggu/private.webp"
+                src="\assets\img\media\media.webp"
+                alt="Insight Bali Partnership"
+                className="w-full h-105 object-cover mb-10 transition duration-700 hover:scale-105"
+              />
+            </div>
 
-            <h3 className="title-card mb-4">Partnership</h3>
+            <h3 className="text-3xl font-light mb-4 font-manrope">Partnership</h3>
 
             <p className="text-neutral-600 leading-relaxed mb-8 px-4 font-inter">
               Event coverage, curated collaborations, and brand partnerships
@@ -76,14 +79,14 @@ export default function InsightBali() {
               <a
               href='#'
               className="
-                  inline-flex items-center
-                  px-12 py-4
-                  border border-black/30
-                  text-black/80
-                  tracking-[0.1em] text-sm
-                  transition-all duration-500
-                  hover:border-black hover:text-black
-                  font-manrope
+                inline-flex items-center
+                px-12 py-4
+                border border-black/50
+                text-black
+                tracking-[0.25em] text-xs
+                transition-all duration-500
+                hover:border-black hover:text-black
+                font-manrope
               "
               >
                 Studio & Partnership

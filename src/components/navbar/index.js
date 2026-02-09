@@ -115,7 +115,7 @@ export default function Navbar() {
           {/* Right CTA */}
           <a
             onClick={() => setBookingOpen(true)}
-            className="cursor-pointer bg-[#ff8432] text-white p-2 md:px-8 md:py-3 rounded-xs tracking-wide font-light hover:opacity-90 transition"
+            className="cursor-pointer bg-[#ff8432] text-white p-2 md:px-8 md:py-3 rounded-xs tracking-wide font-inter font-light hover:opacity-90 transition"
           >
             Book Now
           </a>
@@ -163,7 +163,7 @@ export default function Navbar() {
 
             {/* Footer */}
             <div className="mt-auto pt-8 border-t border-white/20">
-              <div className="flex flex-col md:justify-between gap-6 text-sm">
+              <div className="flex flex-col md:justify-between gap-6 text-sm font-inter">
 
                 {/* Address */}
                 <div className="space-y-1 opacity-80">
@@ -174,7 +174,7 @@ export default function Navbar() {
 
                 <div className="space-y-1">
                   <p className="text-muted-nav">Address</p>
-                  <p className="text-footer-nav">Jl. Example Street No.88, Seminyak, Bali</p>
+                  <p className="text-footer-nav">Jl. Persada II No.888, Kerobokan, Kec. Kuta Utara <br /> Kabupaten Badung, Bali 80361</p>
                 </div>
 
                 {/* Contact */}
